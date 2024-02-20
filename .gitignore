@@ -1,5 +1,10 @@
+# Node artifact files
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+playwright-report/
+test-results/
+report/
+*.env
+auth/
+
+results.xml
+.husky/pre-commit
