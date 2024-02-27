@@ -18,7 +18,6 @@ test.describe('Navigate to viewSystemUsers page', async () => {
         await page.goto(viewSystemUsersUrl);
         await visualHelper.checkPageSnapshot('dashboard-snapshot.png', 5_000, 0.1, true);
         await expect(page).toHaveURL(viewSystemUsersUrl);
-        await page.close();
     });
 
     test('Navigate to PIM page and validate URL', async ({ page }) => {
@@ -26,7 +25,6 @@ test.describe('Navigate to viewSystemUsers page', async () => {
         await page.goto(pimUrl);
         await visualHelper.checkPageSnapshot('table-snapshot.png', 5_000, 0.1, false, loginPage.table);
         await expect(page).toHaveURL(pimUrl);
-        await page.close();
     });
 
     test('Navigate to Leave page and validate URL', async ({ page }) => {
@@ -34,6 +32,5 @@ test.describe('Navigate to viewSystemUsers page', async () => {
         await page.goto(leaveUrl);
         await visualHelper.checkPageSnapshot('leave-snapshot.png', 5_000, 0.1, true);
         await expect(page).toHaveURL(leaveUrl);
-        await page.close();
     });
 });
